@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<title>ForgetPassword</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	
+	<!-- //web-fonts -->
+</head>
+<body>
+	<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+	<!-- //bg effect -->
+	<!-- title -->
+	<h1>修改账号</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form action="/Web-Html/changing" method="post">
+			<h2>修改
+				<i class="fas fa-level-down-alt"></i>
+			</h2>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-user"></i>
+					用户名
+				</label>
+				<input  name="username" type="text" >
+			</div>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					输入旧密码
+				</label>
+					<input  name="password_old" type="Password" >
+			</div>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					输入新密码
+				</label>
+				<input class="newpassword_1" name="passwordAgain_new1" type="Password" >
+			</div>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					输入新密码
+				</label>
+				<input class="newpassword_2" name="passwordAgain_new2" type="Password" >
+			</div>
+	
+			<input type="submit" value="修改密码">
+		</form>
+	</div>
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<p>Copyright xxxx 2018.Company name All rights reserved.</p>
+	</div>
+	<!-- //copyright -->
+
+	<!-- Jquery -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- //Jquery -->
+
+	<!-- effect js -->
+	<script src="js/canva_moving_effect.js"></script>
+	<!-- //effect js -->
+</body>
+</html>

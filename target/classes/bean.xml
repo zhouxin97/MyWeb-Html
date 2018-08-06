@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
+
+	<!-- Initialization for data source -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/zxsjdatabase" />
+		<property name="username" value="root" />
+		<property name="password" value="970301" />
+	</bean>
+
+	<!-- Definition for studentJDBCTemplate bean -->
+	<bean id="LoginJDBCTemplate"
+		class="com.test.Dao.LoginServer">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="SearchBookServerJDBCTemplate"
+		class="com.test.Dao.SearchBookServlet">
+		<property name="dataSource" ref="dataSource"/>
+	
+	</bean>
+</beans>
+
+<!-- 网页index.html -> 通过web.xml 找到DispatcherServlet(myLogin-servlet.xml)
+ -> 通过扫描Controller注释 找到Controller类 -> 表单提交内容放到po类 ->index.html 相应的动作Action
+ 与Controller类注释一样的路径 ->找到路径后 相应操作  -->
